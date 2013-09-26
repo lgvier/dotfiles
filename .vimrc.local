@@ -15,6 +15,11 @@ augroup myvimrc
 	au BufWritePost .vimrc.local so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
+" recursive find
+set path=**
+" open in new tab
+nnoremap gf <C-W>gf
+
 "autocmd Filetype java set makeprg=javac\ %
 "set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
 "map <F9> :make<Return>:copen<Return>
