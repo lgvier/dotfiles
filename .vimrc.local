@@ -8,6 +8,8 @@ set relativenumber
 
 " Tabs FTW
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+" Always use Unix format
+set ff=unix
 
 " Auto-reload vimrc
 augroup myvimrc
