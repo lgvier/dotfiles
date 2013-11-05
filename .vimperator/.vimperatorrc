@@ -1,0 +1,9 @@
+"keymap
+noremap j 10<C-e>
+noremap k 10<C-y>
+noremap h <A-Left>
+noremap l <A-Right>
+
+"map <S-L> :tabmove! +1<CR>
+"map <S-H> :tabmove! -1<CR>
+
