@@ -38,3 +38,7 @@ set background=dark
     colorscheme desert
 "  endif
 "endif
+
+" https://github.com/Shougo/neocomplete.vim
+let g:neocomplete#enable_at_startup = 1
+
