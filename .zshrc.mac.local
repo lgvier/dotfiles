@@ -2,6 +2,8 @@
 alias vim='mvim -v'
 alias vi='vim'
 
+ulimit -S -n 2048
+
 # function ff { osascript -e 'tell application "Finder"' \
 # -e "if (${1-1} <= (count Finder windows)) then" \
 # -e "get POSIX path of (target of window ${1-1} as alias)" \

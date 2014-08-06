@@ -5,6 +5,8 @@ set cursorline
 inoremap jj <ESC>
 
 set relativenumber
+" disable integrated clipboard
+set clipboard=
 
 " Tabs FTW
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab

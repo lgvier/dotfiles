@@ -1,2 +1,5 @@
 # Eclipse-style undo
 set noati
+
+# fix indentation
+set noexpandtab
