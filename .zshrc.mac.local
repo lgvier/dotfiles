@@ -3,6 +3,7 @@ alias vim='mvim -v'
 alias vi='vim'
 
 ulimit -S -n 2048
+[[ -s `brew --prefix`/etc/autojump.sh  ]] && . `brew --prefix`/etc/autojump.sh
 
 # function ff { osascript -e 'tell application "Finder"' \
 # -e "if (${1-1} <= (count Finder windows)) then" \
