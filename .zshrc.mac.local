@@ -1,6 +1,8 @@
 
-alias vim='mvim -v'
+alias vim='/usr/local/bin/mvim -v'
 alias vi='vim'
+alias mvim='open -a MacVim'
+alias gvim='mvim'
 
 ulimit -S -n 2048
 
