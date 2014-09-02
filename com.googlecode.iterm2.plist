@@ -492,7 +492,7 @@
 	<key>HotkeyCode</key>
 	<integer>49</integer>
 	<key>HotkeyModifiers</key>
-	<integer>524576</integer>
+	<integer>262401</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>JobName</key>
@@ -531,7 +531,7 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>365 129 924 485 0 0 1440 878 </string>
+	<string>343 207 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>2019 -183 592 584 1920 -477 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -2069,7 +2069,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-07-29T22:09:33Z</date>
+	<date>2014-09-02T01:11:34Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
