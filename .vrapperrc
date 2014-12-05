@@ -3,3 +3,12 @@ set noati
 
 # fix indentation
 set noexpandtab
+
+" keyboard shortcuts
+inoremap jj <ESC>
+inoremap kj <ESC>
+" make Y behave like other capitals
+map Y y$
+" reselect visual block after indentation
+vnoremap < <gv
+vnoremap > >gv

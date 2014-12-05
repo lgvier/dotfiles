@@ -3,6 +3,22 @@ set cursorline
 
 " keyboard shortcuts
 inoremap jj <ESC>
+inoremap kj <ESC>
+" make Y behave like other capitals
+map Y y$
+" reselect visual block after indentation
+vnoremap < <gv
+vnoremap > >gv
+" move lines
+set macmeta
+noremap <A-j> :m+<CR>
+noremap <A-k> :m-2<CR>
+inoremap <A-j> <Esc>:m+<CR>
+inoremap <A-k> <Esc>:m-2<CR>
+vnoremap <A-j> :m'>+<CR>gv
+vnoremap <A-k> :m-2<CR>gv
+
+
 
 set relativenumber
 " disable integrated clipboard
@@ -46,4 +62,5 @@ let g:neocomplete#enable_at_startup = 1
 
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
+
 
