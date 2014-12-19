@@ -1,4 +1,24 @@
-alias lar='ls -latr'
+alias lar='ls -latrh'
+
+# vi mode
+# http://dougblack.io/words/zsh-vi-mode.html
+
+bindkey -v
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+export KEYTIMEOUT=1
+
+# cmd line editor
+export VISUAL="vim"
+autoload edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd 'v' edit-command-line
 
 # http://joshsymonds.com/blog/2014/06/12/shell-awesomeness-with-prezto/
 
@@ -44,7 +64,7 @@ export EDITOR="vim"
 setopt NO_FLOW_CONTROL
  
 # Keep echo "station" > station from clobbering station
-setopt NO_CLOBBER
+#setopt NO_CLOBBER
  
 # Case insensitive globbing
 setopt NO_CASE_GLOB
@@ -63,12 +83,12 @@ bindkey '\e[1~' beginning-of-line
 bindkey '\e[4~' end-of-line
  
 # Incremental search is elite!
-bindkey -M vicmd "/" history-incremental-search-backward
-bindkey -M vicmd "?" history-incremental-search-forward
+#bindkey -M vicmd "/" history-incremental-search-backward
+#bindkey -M vicmd "?" history-incremental-search-forward
  
 # Search based on what you typed in already
-bindkey -M vicmd "//" history-beginning-search-backward
-bindkey -M vicmd "??" history-beginning-search-forward
+#bindkey -M vicmd "//" history-beginning-search-backward
+#bindkey -M vicmd "??" history-beginning-search-forward
  
 bindkey "\eOP" run-help
  
@@ -76,7 +96,8 @@ bindkey "\eOP" run-help
 bindkey -M vicmd "q" push-line
  
 # it's like, space AND completion. Gnarlbot.
-bindkey -M viins ' ' magic-space
+#bindkey -M viins ' ' magic-space
 
+#
 #bindkey -M vicmd '?' history-incremental-search-backward
 

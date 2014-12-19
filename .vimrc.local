@@ -18,9 +18,20 @@ inoremap <A-k> <Esc>:m-2<CR>
 vnoremap <A-j> :m'>+<CR>gv
 vnoremap <A-k> :m-2<CR>gv
 
+" sudo write
+cmap w!! %!sudo tee > /dev/null %
 
+" I can type :help on my own, thanks.
+noremap <F1> <Esc>
+
+" repeat the last recorded macro
+map Q @@
 
 set relativenumber
+" absolute line numbers in insert mode, relative otherwise for easy movement
+"au InsertEnter * :set nu
+"au InsertLeave * :set rnu
+
 " disable integrated clipboard
 set clipboard=
 

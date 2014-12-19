@@ -22,7 +22,7 @@ autocmd LocationChange '.*' :set hinttags&
 " Restrict link hints in Google search result list
 autocmd LocationChange 'www.google.com' :set hinttags='//h3[@class="r"]/a'
 " Hacker news
-autocmd LocationChange 'news.ycombinator.com' :set hinttags='//td[@class="title"]/a'
+autocmd LocationChange 'news.ycombinator.com' :set hinttags='//td[@class="title"]/a | //td[@class="subtext"]/a[contains(@href, "item?")]'
 " Reddit
 autocmd LocationChange 'www.reddit.com' :set hinttags='//p[@class="title"]/a | //div[contains(@class, "expando-button")]'
 
