@@ -1,11 +1,16 @@
 set cursorline
 "set nocursorline " don't highlight current line
 
+" remove delay on esc
+set timeoutlen=500 ttimeoutlen=0
+
 " keyboard shortcuts
 inoremap jj <ESC>
 inoremap kj <ESC>
 " make Y behave like other capitals
 map Y y$
+" Change first word
+map ,w ^cw
 " reselect visual block after indentation
 vnoremap < <gv
 vnoremap > >gv
@@ -18,8 +23,7 @@ inoremap <A-k> <Esc>:m-2<CR>
 vnoremap <A-j> :m'>+<CR>gv
 vnoremap <A-k> :m-2<CR>gv
 
-" sudo write
-cmap w!! %!sudo tee > /dev/null %
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " I can type :help on my own, thanks.
 noremap <F1> <Esc>
@@ -35,8 +39,11 @@ set relativenumber
 " disable integrated clipboard
 set clipboard=
 
-" Tabs FTW
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+" Tabs
+" set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+" temp js
+set tabstop=2 softtabstop=2 shiftwidth=2
+
 " Always use Unix format
 set ff=unix
 
@@ -73,5 +80,13 @@ let g:neocomplete#enable_at_startup = 1
 
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
+
+" reuse the buffer if the file is already open
+" set switchbuf=useopen,usetab
+
+" fix swap files name collisions
+set backupdir=~/.vim/backup_files//
+set directory=~/.vim/swap_files//
+set undodir=~/.vim/undo_files//
 
 

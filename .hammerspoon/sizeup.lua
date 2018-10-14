@@ -4,7 +4,7 @@
 --
 -- To use, you can tweak the key bindings and the margins
 
-local sizeup = { }
+sizeup = { }
 
 --------------
 -- Bindings --
@@ -82,7 +82,7 @@ hs.hotkey.bind({"cmd","alt","ctrl"}, "M", function()
 	sizeup.maximize()
 end)
 -- Send Window Center
-hs.hotkey.bind({"cmd","alt","ctrl"}, "C", function()
+hs.hotkey.bind({"cmd","alt","ctrl"}, "\\", function()
 	-- sizeup.move_to_center_absolute({w=800, h=600})
 	sizeup.move_to_center_relative({w=0.75, h=0.75})
 end)

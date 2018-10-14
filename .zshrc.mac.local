@@ -4,9 +4,12 @@ alias vi='vim'
 alias mvim='open -a MacVim'
 alias gvim='mvim'
 alias fix_shell_speed='rm /private/var/log/asl/*.asl'
+alias flush_dns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 
 ulimit -S -n 2048
 [[ -s `brew --prefix`/etc/autojump.sh  ]] && . `brew --prefix`/etc/autojump.sh
+
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # function ff { osascript -e 'tell application "Finder"' \
 # -e "if (${1-1} <= (count Finder windows)) then" \

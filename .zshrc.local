@@ -1,9 +1,18 @@
 alias lar='ls -latrh'
+alias https='http --default-scheme=https'
 
-# vi mode
-# http://dougblack.io/words/zsh-vi-mode.html
+# alias tl='echo \\n`ls -rt | tail -1`:\\n && tail -f `ls -rt | tail -1`'
+# tl () { file = `ls -rt`;  }
+function tl() {
+  echo *$1*(.om[1])
+  tail -f *$1*(.om[1])
+}
 
-bindkey -v
+#alias vl='echo \\n`ls -rt | tail -1`:\\n && vim `ls -rt | tail -1`'
+function vl() {
+  echo *$1*(.om[1])
+  vim *$1*(.om[1])
+}
 
 bindkey '^P' up-history
 bindkey '^N' down-history
@@ -14,11 +23,15 @@ bindkey '^r' history-incremental-search-backward
 
 export KEYTIMEOUT=1
 
+# http://dougblack.io/words/zsh-vi-mode.html
 # cmd line editor
 export VISUAL="vim"
 autoload edit-command-line
 zle -N edit-command-line
-bindkey -M vicmd 'v' edit-command-line
+#bindkey -M vicmd 'v' edit-command-line
+bindkey -e
+bindkey '^Xe' edit-command-line
+
 
 # http://joshsymonds.com/blog/2014/06/12/shell-awesomeness-with-prezto/
 
